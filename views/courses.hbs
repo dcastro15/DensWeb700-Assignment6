@@ -2,11 +2,10 @@
 <script>
   function updateCourses() {
     $.ajax({
-      url: '/courses', // The route to fetch the updated data
+      url: '/courses',
       method: 'GET',
       dataType: 'json',
       success: function (data) {
-        // Update the courses table with the new data
         var tableBody = '';
         data.forEach(function (course) {
           tableBody += `
@@ -25,7 +24,7 @@
     });
   }
 
-  // Call the updateCourses function on page load to populate the table initially
+
   updateCourses();
 </script>
 
